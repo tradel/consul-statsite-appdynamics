@@ -9,11 +9,11 @@ Simple instructions:
 
  3. Download (or compile) a [statsite binary] and place it in the `monitors/StatSite` folder.
 
- 3. Start the machine agent. You will probably need to increase the value of `maxMetrics` so that data doesn't get truncated.
+ 4. Start the machine agent. You will probably need to increase the value of `maxMetrics` so that data doesn't get truncated.
  
         java -Xmx64m -Dappdynamics.agent.maxMetrics=10000 -jar machineagent.jar
  
- 3. Configure consul with a [telemetry stanza] to send metrics to statsite.
+ 5. Configure consul with a [telemetry stanza] to send metrics to statsite.
 
         {
             "telemetry": {
@@ -21,7 +21,7 @@ Simple instructions:
             }
         }
 
- 4. Restart Consul. 
+ 6. Restart Consul. 
 
 
 [machine agent]: https://download.appdynamics.com/download/#version=&apm=machine&os=&platform_admin_os=&appdynamics_cluster_os=&events=&eum=&page=1
