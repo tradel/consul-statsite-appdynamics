@@ -1,6 +1,6 @@
 # consul-statsite-appdynamics
 
-Simple instructions:
+## Installation
 
  1. Download the AppDynamics [machine agent], unzip, and configure it for [standalone mode].
  2. Go to the `monitors` folder and clone this repo into a subfolder named `StatSite`.
@@ -23,8 +23,20 @@ Simple instructions:
 
  6. Restart Consul. 
 
+## Finding metrics
+
+All metrics reported by this extension will be found in the Metric Browser under `Application Infrastructure Performance|Tier1|Custom Metrics|statsd|consul`. For details of what each metric means, consult the [Consul Telemetry] guide.
+
+## Custom dashboards
+
+This repository provides a custom dashboard to get you started on monitoring Consul. To import it:
+
+ 1. Log into your AppDynamics controller. Select the **Dashboards & Reports** tab > **Dashboards** > **Import**.
+ 2. Upload the `consul_dashboard.json` file.
+  
 
 [machine agent]: https://download.appdynamics.com/download/#version=&apm=machine&os=&platform_admin_os=&appdynamics_cluster_os=&events=&eum=&page=1
 [standalone mode]: https://docs.appdynamics.com/display/PRO45/Configure+the+Standalone+Machine+Agent
 [telemetry stanza]: https://www.consul.io/docs/agent/options.html#telemetry
 [statsite binary]: https://github.com/statsite/statsite/blob/master/INSTALL.md
+[consul telemetry]: https://www.consul.io/docs/agent/telemetry.html
