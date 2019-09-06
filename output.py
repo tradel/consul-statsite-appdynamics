@@ -24,5 +24,7 @@ for line in sys.stdin:  # type: str
             cluster_roll = 'INDIVIDUAL'
 
         value = int(float(value))
-        
+        if abs(value) > (2 ** 63 - 1):
+            continue
+            
         print 'name=Custom Metrics|statsd|{0},value={1},aggregator={2},time-rollup={3},cluster-rollup={4}'.format(name, value, agg, time_roll, cluster_roll)
